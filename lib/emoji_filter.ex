@@ -6,7 +6,11 @@ defmodule EmojiFilter do
 
   ## Examples
 
-      iex> "👦👦🏻🇯🇵😇😈" |> EmojiFilter.remove_emoji()
+      iex> "👦👦🏻🇯🇵😇😈normal strings" |> EmojiFilter.remove_emoji()
+      "normal strings"
+
+      iex> "👦👦🏻🇯🇵😇😈normal strings" |> EmojiFilter.remove_non_emoji()
+      "👦👦🏻🇯🇵😇😈"
       ""
 
   """

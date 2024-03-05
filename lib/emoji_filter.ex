@@ -11,7 +11,6 @@ defmodule EmojiFilter do
 
       iex> "👦👦🏻🇯🇵😇😈normal strings" |> EmojiFilter.remove_non_emoji()
       "👦👦🏻🇯🇵😇😈"
-      ""
 
   """
   def remove_emoji(original_string) do

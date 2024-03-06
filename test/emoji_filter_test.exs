@@ -60,9 +60,9 @@ defmodule EmojiFilterTest do
     """
 
     expect_string = "......"
-    sanitized_string = original_string |> remove_emoji
+    filtered_string = original_string |> remove_emoji
 
-    assert sanitized_string == expect_string
+    assert filtered_string == expect_string
   end
 
   test "flag emoji must be deleted" do
@@ -78,9 +78,9 @@ defmodule EmojiFilterTest do
     """
 
     expect_string = "......"
-    sanitized_string = original_string |> remove_emoji
+    filtered_string = original_string |> remove_emoji
 
-    assert sanitized_string == expect_string
+    assert filtered_string == expect_string
   end
 
   test "apple emoji must be deleted" do
@@ -96,18 +96,18 @@ defmodule EmojiFilterTest do
     """
 
     expect_string = "......"
-    sanitized_string = original_string |> remove_emoji
+    filtered_string = original_string |> remove_emoji
 
-    assert sanitized_string == expect_string
+    assert filtered_string == expect_string
   end
 
   test "truncate fitzpatrick modifiers " do
     original_string = ".👦👦🏻👦🏼👦🏽👦🏾👦🏿👧👧🏻👧🏼👧🏽👧🏾👧🏿👨👨🏻👨🏼👨🏽👨🏾👨🏿👩👩🏻👩🏼👩🏽👩🏾👩🏿."
 
     expect_string = ".."
-    sanitized_string = original_string |> remove_emoji
+    filtered_string = original_string |> remove_emoji
 
-    assert sanitized_string == expect_string
+    assert filtered_string == expect_string
   end
 
   test "pure text emoji must be deleted" do
@@ -118,9 +118,9 @@ defmodule EmojiFilterTest do
     """
 
     expect_string = "......"
-    sanitized_string = original_string |> remove_emoji
+    filtered_string = original_string |> remove_emoji
 
-    assert sanitized_string == expect_string
+    assert filtered_string == expect_string
   end
 
   test "should keep normal text" do
@@ -234,8 +234,8 @@ defmodule EmojiFilterTest do
     """
 
     expect_string = original_string
-    sanitized_string = original_string |> EmojiFilter.remove_emoji()
+    filtered_string = original_string |> EmojiFilter.remove_emoji()
 
-    assert sanitized_string == expect_string
+    assert filtered_string == expect_string
   end
 end
